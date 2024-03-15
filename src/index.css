@@ -1,1 +1,141 @@
 
+:root {
+  --background: #fff;
+  --text-primary: #333;
+  --text-secondary: #8e05c2;
+  --accent: #8c05c2;
+  --border: #333;
+  --form-bg: #fff;
+  --shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+[data-theme="dark"] {
+  --background: #333;
+  --text-primary: #fff;
+  --text-secondary: #8e05c2;
+  --accent: #8c05c2;
+  ---border: #fff;
+  --form-bg: #35374B;
+  --shadow: #fff 0px 5px 15px;
+}
+
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--text-secondary);
+}
+
+.app {
+  background: var(--background);
+  color: var(--text-primary);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+}
+
+.container {
+  height: 380px;
+  max-width: 400px;
+  width: 400px;
+  height: max-content;
+}
+
+.login {
+  max-width: 400px;
+  width: 400px;
+  box-shadow: var(--shadow);
+  border-radius: 0.5rem;
+  height: max-content;
+  padding: 1rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+}
+
+form {
+  background: var(--form-bg);
+}
+
+form label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+form input {
+  width: 100%;
+  padding: 0.3rem;
+  border-radius: 0.2rem;
+  display: block;
+  margin-bottom: 1rem;
+  border: 0.07rem solid var(--text-primary);
+}
+
+.remember {
+  position: relative;
+  height: 1rem;
+  }
+  
+  .remember input {
+    position: absolute;
+    top: 0;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+  }
+  
+  .remember span {
+    position: absolute;
+    left: 1.5rem;
+    top: 0;
+    font-size: 1rem;
+  }
+  
+  button {
+    border: none;
+    width: 100%;
+    display: block;
+    margin-top: 1rem;
+  padding: 0.3rem 0;
+  text-align: center;
+  font-size: 1rem;
+  cursor: pointer;
+  background: var(--accent);
+  }
+  
+  .bottom {
+    display: flex;
+    margin: 1rem 0;
+  }
+  
+  .bottom p {
+    margin-right: 1rem;
+  }
+
+  .theme-toggle {
+    margin-top: 1.5rem;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .theme-toggle i {
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  
+  
+
+
+

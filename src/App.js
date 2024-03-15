@@ -6,28 +6,31 @@ import { FaToggleOn } from "react-icons/fa";
 function App() {
   return (
     <div className="app">
-      <div className="login">
-        <h1>Login</h1>
-        <form>
-          <label>Email</label>
-          <input type="email" placeholder="Enter your email"></input>
-          <label>Password</label>
-          <input type="password" placeholder="Enter your password"></input>
-          <div className="remember">
-            <input type="checkbox" checked></input>
-            <p>Remember me</p>
+      <div className="container">
+        <div className="login">
+          <h1>Login</h1>
+          <form>
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email"></input>
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password"></input>
+            <label className="remember">
+              <span>Remember me</span>{" "}
+              <input type="checkbox" className="checked" checked></input>
+            </label>
+
+            <button>Log In</button>
+          </form>
+          <div className="bottom">
+            <p>Forgot your password?</p>
+            <a href="/">Reset password</a>
           </div>
-          <button>Log In</button>
-        </form>
-        <div className="bottom">
-          <p>Forget your password?</p>
-          <a href="/">Reset password</a>
           <p>Create Account</p>
         </div>
-      </div>
-      <div className="theme-toggle">
-        <h2>Light Theme</h2>
-        <FaToggleOn></FaToggleOn>
+        <div className="theme-toggle">
+          <h2>Light Theme</h2>
+          <FaToggleOn style={{fontSize: "2rem"}}></FaToggleOn>
+        </div>
       </div>
     </div>
   );
