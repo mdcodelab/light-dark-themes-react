@@ -1,14 +1,16 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import useLocalStorage from "use-local-storage";
-import { FaToggleOn } from "react-icons/fa";
+import { FaToggleOn, FaToggleOff } from "react-icons/fa";
 
 function App() {
   const [theme, setTheme] = useLocalStorage("theme", "light");
+  const [toggleOn, setToggleOn] = useState(true);
   const title = useRef();
 
   const switchTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
+    setToggleOn((prevState) => !prevState);
 
     // change the title
     title.current.innerText =
@@ -40,10 +42,11 @@ function App() {
         </div>
         <div className="theme-toggle">
           <h2 ref={title}>Light Theme</h2>
-          <FaToggleOn
-            onClick={switchTheme}
-            style={{ fontSize: "2rem" }}
-          ></FaToggleOn>
+          {toggleOn ? (
+            <FaToggleOn onClick={switchTheme} style={{ fontSize: "2rem" }} />
+          ) : (
+            <FaToggleOff onClick={switchTheme} style={{ fontSize: "2rem" }} />
+          )}
         </div>
       </div>
     </div>
